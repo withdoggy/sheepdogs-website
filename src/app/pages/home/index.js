@@ -9,11 +9,11 @@ export default class HomePage extends Component {
         <div className="homepage">
         <Header/>
         <Container fluid>
-        <Row>
-          <Col>
-          <NewsList/>
-          </Col>
-        </Row>
+          <Row>
+            <Col>
+              <NewsList/>
+            </Col>
+          </Row>
         </Container>
         <Footer/>
         </div>

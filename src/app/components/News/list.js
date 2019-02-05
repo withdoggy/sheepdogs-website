@@ -40,10 +40,9 @@ export class NewsList extends Component {
     const news = this.renderNews();
     return (
       <div className="news">
-      <Container>
-      { news }
-      </Container>
-
+        <Container>
+          { news }
+        </Container>
       </div>
     );
   }

@@ -15,7 +15,6 @@ export default class Footer extends Component {
                 <p className="text-muted">sheepdogs.pl</p>
                 </Col>
             </Row>
-
         </Container>
       </footer>
     )

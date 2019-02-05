@@ -4,13 +4,10 @@ import {
     Navbar,
     NavbarToggler,
     NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    Nav
+   } from 'reactstrap';
+import AuthDropdown from './auth';
+import MainMenu from './menu';
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -29,33 +26,16 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-      <Navbar color="dark" dark expand="md">
-         <NavbarBrand href="/" className="mr-auto">Sheepdogs in Poland</NavbarBrand>
-         <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-         <Collapse isOpen={!this.state.collapsed} navbar>
-         <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/events">Terminy</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">Psy</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Konto
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Zaloguj
-                  </DropdownItem>
-                  <DropdownItem>
-                    Zarejestruj
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+        <Navbar color="dark" dark expand="md">
+          <NavbarBrand href="/" className="mr-auto">Sheepdogs in Poland</NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          <Collapse isOpen={!this.state.collapsed} navbar>
+            <Nav className="ml-auto" navbar>
+              <MainMenu/>
+              <AuthDropdown/>
             </Nav>
           </Collapse>
-       </Navbar>
+         </Navbar>
       </div>
     );
   }

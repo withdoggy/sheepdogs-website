@@ -8,7 +8,6 @@ const localizer = BigCalendar.momentLocalizer(moment)
 export default class CalendarPage extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             events: [
                 {
@@ -24,24 +23,23 @@ export default class CalendarPage extends Component {
   render() {
     return (
         <div className="calendar">
-        <Header/>
-        <Container fluid>
-        <Row>
-          <Col>
-          <div>
-          <BigCalendar
-      localizer={localizer}
-      defaultView={BigCalendar.Views.MONTH}
-      events={this.state.events}
-      startAccessor="start"
-      endAccessor="end"
-    />
-          </div>
-
-          </Col>
-        </Row>
-        </Container>
-        <Footer/>
+            <Header/>
+            <Container fluid>
+                <Row>
+                    <Col>
+                        <div>
+                            <BigCalendar
+                                localizer={localizer}
+                                defaultView={BigCalendar.Views.MONTH}
+                                events={this.state.events}
+                                startAccessor="start"
+                                endAccessor="end"
+                                />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            <Footer/>
         </div>
     )
   }
