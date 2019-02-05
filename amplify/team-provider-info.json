@@ -22,5 +22,17 @@
             "StackName": "sheepdogs-20190205193640",
             "StackId": "arn:aws:cloudformation:eu-west-1:283476803154:stack/sheepdogs-20190205193640/faae1a90-2974-11e9-965c-0637a63b4e60"
         }
+    },
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "sheepdogs-20190206002156-authRole",
+            "UnauthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190206002156-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190206002156-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "sheepdogs-20190206002156-deployment",
+            "UnauthRoleName": "sheepdogs-20190206002156-unauthRole",
+            "StackName": "sheepdogs-20190206002156",
+            "StackId": "arn:aws:cloudformation:eu-west-1:283476803154:stack/sheepdogs-20190206002156/d4f14750-299c-11e9-9386-064aa725f74e"
+        }
     }
 }
