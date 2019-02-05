@@ -1,14 +1,26 @@
 {
-	"master": {
-		"awscloudformation": {
-			"AuthRoleName": "sheepdogs-20190205192540-authRole",
-			"UnauthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190205192540-unauthRole",
-			"AuthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190205192540-authRole",
-			"Region": "eu-west-1",
-			"DeploymentBucketName": "sheepdogs-20190205192540-deployment",
-			"UnauthRoleName": "sheepdogs-20190205192540-unauthRole",
-			"StackName": "sheepdogs-20190205192540",
-			"StackId": "arn:aws:cloudformation:eu-west-1:283476803154:stack/sheepdogs-20190205192540/7178c9b0-2973-11e9-a458-068bfa33c7ce"
-		}
-	}
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "sheepdogs-20190205192540-authRole",
+            "UnauthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190205192540-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190205192540-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "sheepdogs-20190205192540-deployment",
+            "UnauthRoleName": "sheepdogs-20190205192540-unauthRole",
+            "StackName": "sheepdogs-20190205192540",
+            "StackId": "arn:aws:cloudformation:eu-west-1:283476803154:stack/sheepdogs-20190205192540/7178c9b0-2973-11e9-a458-068bfa33c7ce"
+        }
+    },
+    "develop": {
+        "awscloudformation": {
+            "AuthRoleName": "sheepdogs-20190205193640-authRole",
+            "UnauthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190205193640-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190205193640-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "sheepdogs-20190205193640-deployment",
+            "UnauthRoleName": "sheepdogs-20190205193640-unauthRole",
+            "StackName": "sheepdogs-20190205193640",
+            "StackId": "arn:aws:cloudformation:eu-west-1:283476803154:stack/sheepdogs-20190205193640/faae1a90-2974-11e9-965c-0637a63b4e60"
+        }
+    }
 }
