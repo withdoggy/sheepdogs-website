@@ -1,14 +1,14 @@
 {
-    "prod": {
-        "awscloudformation": {
-            "AuthRoleName": "sheepdogs-20190205190137-authRole",
-            "UnauthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190205190137-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190205190137-authRole",
-            "Region": "eu-west-1",
-            "DeploymentBucketName": "sheepdogs-20190205190137-deployment",
-            "UnauthRoleName": "sheepdogs-20190205190137-unauthRole",
-            "StackName": "sheepdogs-20190205190137",
-            "StackId": "arn:aws:cloudformation:eu-west-1:283476803154:stack/sheepdogs-20190205190137/158451e0-2970-11e9-9435-0a3aaca2533c"
-        }
-    }
+	"master": {
+		"awscloudformation": {
+			"AuthRoleName": "sheepdogs-20190205192540-authRole",
+			"UnauthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190205192540-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::283476803154:role/sheepdogs-20190205192540-authRole",
+			"Region": "eu-west-1",
+			"DeploymentBucketName": "sheepdogs-20190205192540-deployment",
+			"UnauthRoleName": "sheepdogs-20190205192540-unauthRole",
+			"StackName": "sheepdogs-20190205192540",
+			"StackId": "arn:aws:cloudformation:eu-west-1:283476803154:stack/sheepdogs-20190205192540/7178c9b0-2973-11e9-a458-068bfa33c7ce"
+		}
+	}
 }
