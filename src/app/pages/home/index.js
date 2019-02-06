@@ -1,22 +1,15 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'reactstrap';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import {NewsList} from '../../components/News';
+import { ArticleList } from '../../components/Article';
+import PageLayout from '../../layout';
+import './style.css';
 export default class HomePage extends Component {
   render() {
     return (
-        <div className="homepage">
-        <Header/>
-        <Container fluid>
-          <Row>
-            <Col>
-              <NewsList/>
-            </Col>
-          </Row>
-        </Container>
-        <Footer/>
-        </div>
+        <PageLayout>
+          <div className="homepage">
+              <ArticleList/>
+          </div>
+        </PageLayout>
     )
   }
 }

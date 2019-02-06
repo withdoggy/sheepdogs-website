@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
-import { Row, Col, Container } from 'reactstrap';
+import { Row, Col, Layout } from 'antd';
 import { Link } from "react-router-dom";
-export default class Footer extends Component {
+import './style.css';
+const {Footer} = Layout;
+
+export default class FooterComponent extends Component {
   render() {
     return (
-        <footer className="footer">
-        <Container>
-            <Row>
-                <Col><a href="https://www.youtube.com/channel/UC8RDbmn1sqWSaLYY30syrGg">Youtube</a></Col>
-                <Col><Link to="/">Kontakt</Link></Col>
+        <Footer className="footer">
+            <Row gutter={16}>
+                <Col className="gutter-row" span={8} style={{textAlign: 'center'}}><div className="gutter-box"><a href="https://www.youtube.com/channel/UC8RDbmn1sqWSaLYY30syrGg" className="footer-link">Youtube</a></div></Col>
+                <Col className="gutter-row" span={8} style={{textAlign: 'center'}}><div className="gutter-box"><Link to="/" className="footer-link">dd</Link></div></Col>
+                <Col className="gutter-row" span={8} style={{textAlign: 'center'}}><div className="gutter-box"><Link to="/" className="footer-link">Kontakt</Link></div></Col>
             </Row>
             <Row>
-                <Col>
-                <p className="text-muted">sheepdogs.pl</p>
+                <Col style={{textAlign: 'center'}}>
+                <p>sheepdogs.pl</p>
                 </Col>
             </Row>
-        </Container>
-      </footer>
+      </Footer>
     )
   }
 }

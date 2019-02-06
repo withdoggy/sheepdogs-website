@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'reactstrap';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import BigCalendar from 'react-big-calendar'
-import moment from 'moment'
-const localizer = BigCalendar.momentLocalizer(moment)
+import CalendarComponent  from '../../components/Calendar';
+import PageLayout from '../../layout';
 export default class CalendarPage extends Component {
     constructor(props) {
         super(props);
@@ -20,27 +16,13 @@ export default class CalendarPage extends Component {
             ]
         };
       }
-  render() {
-    return (
-        <div className="calendar">
-            <Header/>
-            <Container fluid>
-                <Row>
-                    <Col>
-                        <div>
-                            <BigCalendar
-                                localizer={localizer}
-                                defaultView={BigCalendar.Views.MONTH}
-                                events={this.state.events}
-                                startAccessor="start"
-                                endAccessor="end"
-                                />
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-            <Footer/>
-        </div>
-    )
-  }
+      render() {
+        return (
+            <PageLayout>
+              <div className="events">
+                  <CalendarComponent/>
+              </div>
+            </PageLayout>
+        )
+      }
 }
