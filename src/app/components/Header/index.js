@@ -1,44 +1,38 @@
 import React, { Component } from 'react';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav
-   } from 'reactstrap';
-import AuthDropdown from './auth';
-import MainMenu from './menu';
-class Header extends Component {
-    constructor(props) {
-        super(props);
+import { Layout, Menu} from "antd";
+import { Link } from "react-router-dom";
+//import AuthDropdown from './auth';
+//import MainMenu from './menu';
+const { Header } = Layout;
+class HeaderComponent extends Component {
+    menu = (
+        <Menu onClick={this.handleMenuClick}>
+          <Menu.Item key="exit">exit</Menu.Item>
+        </Menu>
+      );
+    handleMenuClick(e) {
+        if (e.key === "exit") {
+          sessionStorage.removeItem("access_token");
+          window.location.hash = "login";
+        }
+    };
 
-        this.toggleNavbar = this.toggleNavbar.bind(this);
-        this.state = {
-          collapsed: true
-        };
-      }
-
-      toggleNavbar() {
-        this.setState({
-          collapsed: !this.state.collapsed
-        });
-      }
   render() {
     return (
-      <div className="header">
-        <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/" className="mr-auto">Sheepdogs in Poland</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-          <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav className="ml-auto" navbar>
-              <MainMenu/>
-              <AuthDropdown/>
-            </Nav>
-          </Collapse>
-         </Navbar>
-      </div>
+      <Header className="header">
+       <Menu
+        theme="dark"
+        mode="horizontal"
+        defaultSelectedKeys={["homePage"]}
+        style={{ lineHeight: "64px" }}
+      >
+      <Menu.Item key="homePage">
+          <Link to="/">HomePage</Link>
+        </Menu.Item>
+      </Menu>
+      </Header>
     );
   }
 }
 
-export default Header;
+export default HeaderComponent;

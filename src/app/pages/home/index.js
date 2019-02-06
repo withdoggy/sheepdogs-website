@@ -1,21 +1,17 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'reactstrap';
-import Header from '../../components/Header';
+import { Layout } from "antd";
 import Footer from '../../components/Footer';
 import {NewsList} from '../../components/News';
+import HeaderComponent from '../../components/Header';
 export default class HomePage extends Component {
   render() {
     return (
         <div className="homepage">
-        <Header/>
-        <Container fluid>
-          <Row>
-            <Col>
+        <HeaderComponent/>
+          <Layout>
               <NewsList/>
-            </Col>
-          </Row>
-        </Container>
-        <Footer/>
+          </Layout>
+          <Footer/>
         </div>
     )
   }

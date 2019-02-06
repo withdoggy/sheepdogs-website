@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { ArticleRow } from './news';
-import { Container } from 'reactstrap';
 export class NewsList extends Component {
   constructor(props) {
     super(props);
@@ -40,9 +39,7 @@ export class NewsList extends Component {
     const news = this.renderNews();
     return (
       <div className="news">
-        <Container>
           { news }
-        </Container>
       </div>
     );
   }
