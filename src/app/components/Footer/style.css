@@ -1,0 +1,10 @@
+.footer{
+    background-color: rgb(214, 191, 117);
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+
+}
+.footer-link{
+    color: white;
+}

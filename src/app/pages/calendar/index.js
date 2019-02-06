@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import { Row, Col } from "antd";
+import CalendarComponent  from '../../components/Calendar';
+import PageLayout from '../../layout';
 export default class CalendarPage extends Component {
     constructor(props) {
         super(props);
@@ -17,19 +16,13 @@ export default class CalendarPage extends Component {
             ]
         };
       }
-  render() {
-    return (
-        <div className="calendar">
-            <Header/>
-                <Row>
-                    <Col>
-                        <div>
-
-                        </div>
-                    </Col>
-                </Row>
-            <Footer/>
-        </div>
-    )
-  }
+      render() {
+        return (
+            <PageLayout>
+              <div className="events">
+                  <CalendarComponent/>
+              </div>
+            </PageLayout>
+        )
+      }
 }

@@ -5,30 +5,32 @@ import { Link } from "react-router-dom";
 //import MainMenu from './menu';
 const { Header } = Layout;
 class HeaderComponent extends Component {
-    menu = (
-        <Menu onClick={this.handleMenuClick}>
-          <Menu.Item key="exit">exit</Menu.Item>
-        </Menu>
-      );
-    handleMenuClick(e) {
-        if (e.key === "exit") {
-          sessionStorage.removeItem("access_token");
-          window.location.hash = "login";
-        }
-    };
+    state = {
+      current: 'homePage',
+    }
 
+    handleClick = (e) => {
+      this.setState({
+        current: e.key,
+      });
+    }
   render() {
     return (
-      <Header className="header">
+      <Header style={{ position: "sticky", top: "0" }}>
+       <div className="logo"></div>
        <Menu
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={["homePage"]}
+        onClick={this.handleClick}
+        selectedKeys={[this.state.current]}
         style={{ lineHeight: "64px" }}
       >
       <Menu.Item key="homePage">
-          <Link to="/">HomePage</Link>
-        </Menu.Item>
+          <Link to="/">Home</Link>
+      </Menu.Item>
+      <Menu.Item key="events">
+          <Link to="/events">Kalendarz</Link>
+      </Menu.Item>
       </Menu>
       </Header>
     );
