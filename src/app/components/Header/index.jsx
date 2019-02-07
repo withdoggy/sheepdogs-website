@@ -15,6 +15,12 @@ class HeaderComponent extends Component {
     });
   };
   render() {
+    let b;
+    if (this.props.childProps.isLoggedIn) {
+      b = <Link to="/logout">Logout</Link>;
+    } else {
+      b = <Link to="/auth">Login</Link>;
+    }
     return (
       <Header className="header">
         <div className="logo" />
@@ -31,6 +37,10 @@ class HeaderComponent extends Component {
           <Menu.Item key="events">
             <Link to="/events">Kalendarz</Link>
           </Menu.Item>
+          <Menu.Item key="dupa">
+            <Link to="/secret">Kalendarz</Link>
+          </Menu.Item>
+          <Menu.Item key="login">{b}</Menu.Item>
         </Menu>
       </Header>
     );

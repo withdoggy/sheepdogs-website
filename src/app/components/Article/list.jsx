@@ -42,7 +42,6 @@ export class ArticleList extends Component {
     });
   }
   render() {
-    const news = this.renderNews();
-    return <Timeline>{news}</Timeline>;
+    return <Timeline>{this.renderNews()}</Timeline>;
   }
 }

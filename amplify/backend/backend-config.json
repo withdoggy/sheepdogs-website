@@ -1,1 +1,8 @@
-{}
+{
+	"auth": {
+		"sheepdogs": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

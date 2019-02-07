@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
-import { Affix, BackTop, Layout } from 'antd';
-import HeaderComponent from '../components/Header';
-import FooterComponent from '../components/Footer';
-const { Content } = Layout;
+import 'semantic-ui-css/semantic.min.css';
+import NavBar from '../components/NavBar/Navbar';
+import { Container, Segment } from 'semantic-ui-react';
+import Footer from '../components/Footer/Footer';
+import styled from 'styled-components';
+const Wrapper = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+`;
+const Content = styled(Container)`
+  margin-top: 6em
+  flex: 1;
+`;
+const FooterSegment = styled(Segment)`
+  margin: 5em 0em 0em
+  padding: 5em 0em
+  text-align: center;
+`;
 export default class PageLayout extends Component {
   render() {
     return (
-      <Layout className="layout">
-        <div>
-          <BackTop />
-        </div>
-        <Affix offsetTop={0}>
-          <HeaderComponent />
-        </Affix>
-        <Content style={{ padding: '16px 50px', height: 'calc(100vh - 100px)', 'box-sizing': 'border-box' }}>
-          {this.props.children}
-        </Content>
-        <FooterComponent />
-      </Layout>
+      <Wrapper>
+        <NavBar currentUser={this.props.childProps.currentUser} />
+        <Content>{this.props.children}</Content>
+        <FooterSegment inverted>
+          <Footer />
+        </FooterSegment>
+      </Wrapper>
     );
   }
 }

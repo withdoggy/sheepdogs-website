@@ -1,19 +1,44 @@
-import React from 'react';
-import HomePage from './pages/home';
-import EventsPage from './pages/events';
-import { Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react';
 import PageLayout from './layout';
-class App extends React.Component {
+import Amplify, { Auth } from 'aws-amplify';
+import aws_exports from '../aws-exports';
+
+import Router from './Routes';
+Amplify.configure(aws_exports);
+
+class App extends Component {
+  state = {
+    currentUser: null,
+    authState: {
+      isLoggedIn: false,
+    },
+  };
+
+  handleUserSignIn = () => {
+    this.setState({ authState: { isLoggedIn: true } });
+  };
+  handleUserSignOut = () => {
+    this.setState({ authState: { isLoggedIn: false } });
+  };
+  componentDidMount() {
+    Auth.currentAuthenticatedUser()
+      .then(user => this.setState({ currentUser: user }))
+      .catch(err => console.log(err));
+  }
   render() {
+    const childProps = {
+      isLoggedIn: this.state.authState.isLoggedIn,
+      onUserSignIn: this.handleUserSignIn,
+      onUserSignOut: this.handleUserSignOut,
+      currentUser: this.state.currentUser,
+    };
+    console.log(this.state.currentUser);
     return (
-      <React.Fragment>
-        <PageLayout>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/events" component={EventsPage} />
-          </Switch>
+      <>
+        <PageLayout childProps={childProps}>
+          <Router childProps={childProps} />
         </PageLayout>
-      </React.Fragment>
+      </>
     );
   }
 }

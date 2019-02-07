@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar render navbar for anonymous user 1`] = `
+<div
+  className="ui inverted top fixed menu"
+>
+  <a
+    className="item"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+  <a
+    className="item"
+    onClick={[Function]}
+  >
+    Events
+  </a>
+  <div
+    className="right menu"
+  >
+    <div
+      aria-expanded={false}
+      className="ui item dropdown"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="listbox"
+      tabIndex={0}
+    >
+      <div
+        aria-live="polite"
+        className="text"
+        role="alert"
+      >
+        Konto
+      </div>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        className="menu transition"
+      >
+        <div
+          aria-checked={false}
+          className="item"
+          name="login"
+          onClick={[Function]}
+          role="option"
+        >
+          Profil
+        </div>
+        <div
+          aria-checked={false}
+          className="item"
+          name="logout"
+          onClick={[Function]}
+          role="option"
+        >
+          Wyloguj
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar render navbar for authenticated user 1`] = `
+<div
+  className="ui inverted top fixed menu"
+>
+  <a
+    className="item"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+  <a
+    className="item"
+    onClick={[Function]}
+  >
+    Events
+  </a>
+  <div
+    className="right menu"
+  >
+    <div
+      aria-expanded={false}
+      className="ui item dropdown"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="listbox"
+      tabIndex={0}
+    >
+      <div
+        aria-live="polite"
+        className="text"
+        role="alert"
+      >
+        Konto
+      </div>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        className="menu transition"
+      >
+        <div
+          aria-checked={false}
+          className="item"
+          name="login"
+          onClick={[Function]}
+          role="option"
+        >
+          Profil
+        </div>
+        <div
+          aria-checked={false}
+          className="item"
+          name="logout"
+          onClick={[Function]}
+          role="option"
+        >
+          Wyloguj
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

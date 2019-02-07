@@ -21,6 +21,13 @@
             "UnauthRoleName": "sheepdogs-20190205193640-unauthRole",
             "StackName": "sheepdogs-20190205193640",
             "StackId": "arn:aws:cloudformation:eu-west-1:283476803154:stack/sheepdogs-20190205193640/faae1a90-2974-11e9-965c-0637a63b4e60"
+        },
+        "categories": {
+            "auth": {
+                "sheepdogs": {
+                    "facebookAppId": "2169530090028733"
+                }
+            }
         }
     },
     "dev": {
@@ -33,6 +40,13 @@
             "UnauthRoleName": "sheepdogs-20190206002156-unauthRole",
             "StackName": "sheepdogs-20190206002156",
             "StackId": "arn:aws:cloudformation:eu-west-1:283476803154:stack/sheepdogs-20190206002156/d4f14750-299c-11e9-9386-064aa725f74e"
+        },
+        "categories": {
+            "auth": {
+                "sheepdogs": {
+                    "facebookAppId": "2169530090028733"
+                }
+            }
         }
     }
 }
